@@ -18,7 +18,7 @@ Spring Boot 使用 RestTemplate 发送 HTTP 请求到 Flask API。
 
 ## 使用apifox进行POST类型请求发送
 
-![image-20240630220914006](D:\Typora\image-20240630220914006.png)
+![image-20240630220914006](https://github.com/zzm000/Dijkstra/blob/main/image-20240630220914006.png)
 
 ```
 {
@@ -35,5 +35,5 @@ Spring Boot 使用 RestTemplate 发送 HTTP 请求到 Flask API。
 
 ## 拓扑图
 
-![image-20240630221234416](D:\Typora\image-20240630221234416.png)
+![image-20240630221234416](https://github.com/zzm000/Dijkstra/blob/main/image-20240630221234416.png)
 
