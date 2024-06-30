@@ -15,10 +15,7 @@
  */
 
 package com.example.dijkstra.controller;
-
 import org.springframework.web.bind.annotation.*;
-
-
 import java.util.Map;
 
 import org.springframework.http.ResponseEntity;
@@ -28,7 +25,7 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/api")
 public class DijkstraController {
 
-    @PostMapping("/shortest-path")
+    @PostMapping("/dijkstra")
     public ResponseEntity<Map<String, Object>> getShortestPath(@RequestBody Map<String, Object> payload) {
         RestTemplate restTemplate = new RestTemplate();
         String url = "http://localhost:5000/dijkstra";
