@@ -7,7 +7,7 @@ def dijkstra(graph, start, end):
     queue = [(0, start)]
     distances = {vertex: float('infinity') for vertex in graph}
     distances[start] = 0
-    predecessors = {vertex: None for vertex in graph}
+    pre = {vertex: None for vertex in graph}
 
     while queue:
         current_distance, current_vertex = heapq.heappop(queue)
@@ -19,13 +19,13 @@ def dijkstra(graph, start, end):
             distance = current_distance + weight
             if distance < distances[neighbor]:
                 distances[neighbor] = distance
-                predecessors[neighbor] = current_vertex
+                pre[neighbor] = current_vertex
                 heapq.heappush(queue, (distance, neighbor))
 
     path, current = [], end
     while current is not None:
         path.append(current)
-        current = predecessors[current]
+        current = pre[current]
     path.reverse()
 
     return path, distances[end]
